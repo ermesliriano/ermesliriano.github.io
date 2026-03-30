@@ -268,6 +268,11 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
+  - backend
+  - backend/**/*
+  - venv
+  - .venv
+  - node_modules
 
 plugins:
   - jekyll-paginate

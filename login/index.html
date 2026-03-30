@@ -1,17 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Mi Prueba de Login</title>
-    <link rel="stylesheet" href="estilos-login.css"> </head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://accounts.google.com/gsi/client" async></script>
+</head>
 <body>
-    <div class="login-container">
-        <h1>Área de Pruebas</h1>
-        <form>
-            <input type="text" placeholder="Usuario">
-            <input type="password" placeholder="Contraseña">
-            <button type="submit">Entrar</button>
-        </form>
-    </div>
+  <main class="card">
+    <h1>Iniciar sesión</h1>
+
+    <section>
+      <h2>Email y contraseña</h2>
+      <form id="loginForm">
+        <label>Email <input name="email" type="email" required /></label>
+        <label>Contraseña <input name="password" type="password" required minlength="8" /></label>
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p>
+        ¿No tienes cuenta?
+        <button id="registerBtn" type="button">Crear cuenta</button>
+      </p>
+    </section>
+
+    <section>
+      <h2>Google</h2>
+      <div id="gsiButton"></div>
+    </section>
+
+    <section>
+      <h2>Estado</h2>
+      <pre id="out"></pre>
+      <button id="meBtn" type="button">/me</button>
+      <button id="logoutBtn" type="button">Logout</button>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
 </body>
 </html>
