@@ -1,1 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://accounts.google.com/gsi/client" async></script>
+</head>
+<body>
+  <div id="g_id_onload"
+     data-client_id="423467785550-6qeuu5n702rvbpumf6tl8mqe5gs4obh6.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="redirect"
+     data-login_uri="https://volunteerm.onrender.com/auth/callback"
+     data-auto_prompt="false">
+</div>
+  <main class="card">
+    <h1>Iniciar sesión</h1>
 
+    <section>
+      <h2>Email y contraseña</h2>
+      <form id="loginForm">
+        <label>Email <input name="email" type="email" required /></label>
+        <label>Contraseña <input name="password" type="password" required minlength="8" /></label>
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p>
+        ¿No tienes cuenta?
+        <button id="registerBtn" type="button">Crear cuenta</button>
+      </p>
+    </section>
+
+    <section>
+      <h2>Google</h2>
+      <div id="gsiButton"></div>
+    </section>
+
+    <section>
+      <h2>Estado</h2>
+      <pre id="out"></pre>
+      <button id="meBtn" type="button">/me</button>
+      <button id="logoutBtn" type="button">Logout</button>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
